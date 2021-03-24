@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista de Tarefas</title>
+        <link rel="stylesheet" href="app.css">
+        <link id="theme-style" rel="stylesheet" href="themes/blue.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="app.js"></script>
+        <script src="appStorage.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <header>Lista de Tarefas </header>
+            <div id="toolbar">
+                <label for="theme">Tema</label>
+                <select id="theme">
+                    <option value="blue">Azul</option>
+                    <option value="green">Verde</option>
+                    <option value="magenta">Magenta</option>
+                    <option value="red">Red</option>
+                </select>
+            </div>
+            <div id="main">
+                <div id="add-task">
+                    <label for="new-task-name">Criar Tarefa</label>
+                    <input type="text" id="new-task-name"
+                        placeholder="Informe o nome da tarefa">
+                </div>
+                <ul id="task-list"></ul>
+            </div>
+            <footer></footer>
+        </div>
+        <div id="templates" class="hidden">
+            <ul id="task-template">
+                <li class="task">
+                    <div class="tools">
+                        <button class="delete" title="Remover">X</button>
+                        <button class="move-up" title="Para cima">&#5123;</button>
+                        <button class="move-down" title="Para baixo">&#5121;</button>
+                    </div>
+                    <span class="task-name"></span>
+                    <input type="text" class="task-name hidden">
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
